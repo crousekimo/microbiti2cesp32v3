@@ -219,7 +219,7 @@ namespace microbiti2cesp32v3 {
     //% weight=101
     export function thingspeak3(key:number, value1: value555): string {
         sendi2cmessage("tt="+convertToText(key)+","+convertToText(value1))
-	basic.pause(2000)
+	basic.pause(400)
         let a=receivei2cmessage("ttt=").substr(1)
 	if (!a.includes("ttt"))
 	{
@@ -255,7 +255,7 @@ namespace microbiti2cesp32v3 {
     //% weight=50
     export function ntpget():void {
         sendi2cmessage("ntpget1=")
-	basic.pause(400)
+	basic.pause(200)
 	nptgettime=receivei2cmessage("ntpget2=").substr(1)
 	if (!nptgettime.includes("ntpget2"))
 	        nptgettime=receivei2cmessage("ntpget2=").substr(1)
