@@ -71,7 +71,7 @@ namespace microbiti2cesp32v2 {
     export function subMqtt(topic: string):void {
 	 check()
          sendi2cmessage("sebmqtt="+topic)
-	 basic.pause(100)
+	 basic.pause(200)
     }
     //% group="2.MQTT"  
     //% blockId=ReceiveMqttTopic block="receive mqtt topic"
@@ -90,10 +90,10 @@ namespace microbiti2cesp32v2 {
     //% weight=97 	
     export function ReceiveMqttMessage():string {
         let a=receivei2cmessage("mqttrecm=").substr(1)
-	basic.pause(100)
+	basic.pause(300)
 	if (!a.includes("mqttrecm"))
         a=receivei2cmessage("mqttrecm=").substr(1)
-	basic.pause(100)
+	basic.pause(300)
 	a=a.substr(8)
         return a
     }  
@@ -103,7 +103,7 @@ namespace microbiti2cesp32v2 {
     //% weight=57 
     export function clearmqtt():void {
         sendi2cmessage("clearmqtt=")
-	basic.pause(100)
+	basic.pause(200)
     }  
 	
 	
@@ -112,7 +112,7 @@ namespace microbiti2cesp32v2 {
     //% weight=56 
     export function sendmqtt(topic: string, message: string):void {
         sendi2cmessage("sendmqtt="+topic+","+message)
-	basic.pause(100)
+	basic.pause(200)
     }  
     //% group="3.Line notify"  
     //% blockId=linetoken block="Line notify token %token "
@@ -367,7 +367,7 @@ namespace microbiti2cesp32v2 {
     NumberFormat.Int8LE,
     false
     )
-    basic.pause(300)
+    basic.pause(500)
     i2cmessage2=""
     let dd = pins.i2cReadBuffer(8,952,false)
     for (let index = 0; index <= 718; index++) {
