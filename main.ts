@@ -261,7 +261,7 @@ namespace microbiti2cesp32v2 {
     //% weight=50
     export function ntpget():void {
         sendi2cmessage("ntpget1=")
-	basic.pause(800)
+	basic.pause(600)
 	nptgettime=receivei2cmessage("ntpget2=").substr(1)
 	if (!nptgettime.includes("ntpget2"))
 	        nptgettime=receivei2cmessage("ntpget2=").substr(1)
