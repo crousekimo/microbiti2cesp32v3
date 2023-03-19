@@ -90,10 +90,10 @@ namespace microbiti2cesp32v2 {
     //% weight=97 	
     export function ReceiveMqttMessage():string {
         let a=receivei2cmessage("mqttrecm=").substr(1)
-	basic.pause(300)
+	basic.pause(100)
 	if (!a.includes("mqttrecm"))
         a=receivei2cmessage("mqttrecm=").substr(1)
-	basic.pause(300)
+	basic.pause(100)
 	a=a.substr(8)
         return a
     }  
@@ -367,7 +367,7 @@ namespace microbiti2cesp32v2 {
     NumberFormat.Int8LE,
     false
     )
-    basic.pause(500)
+    basic.pause(300)
     i2cmessage2=""
     let dd = pins.i2cReadBuffer(8,952,false)
     for (let index = 0; index <= 718; index++) {
