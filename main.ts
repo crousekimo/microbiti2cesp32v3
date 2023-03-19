@@ -80,7 +80,7 @@ namespace microbiti2cesp32v2 {
         let a=receivei2cmessage("mqttrect=").substr(1)
 	basic.pause(100)
    	if (!a.includes("mqttrect"))
-        a=receivei2cmessage("mqttrect=").substr(1)
+        a=receivei2cmessage("mqttrec=").substr(1)
         a=a.substr(8)
 	return a
     }  
