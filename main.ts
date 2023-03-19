@@ -19,7 +19,7 @@ namespace microbiti2cesp32v2 {
 	Sec = 5
      }
      let datelist: string[] = []
-	
+     let mqttlist: string[] = []	
      let nptgettime="";	
      let mqttmessage="";
      let mqtttopic="";
@@ -82,18 +82,14 @@ namespace microbiti2cesp32v2 {
    	if (!a.includes("mqttrec"))
         a=receivei2cmessage("mqttrec=")
         a=a.substr(8)
-	return a
+	mqttlist=a.split(",")
+	return mqttlist[0]
     }  
     //% group="2.MQTT"  
     //% blockId=ReceiveMqttMessage block="receive mqtt message"
     //% weight=97 	
     export function ReceiveMqttMessage():string {
-        let a=receivei2cmessage("mqttrecm=").substr(1)
-	basic.pause(100)
-	if (!a.includes("mqttrecm"))
-        a=receivei2cmessage("mqttrecm=").substr(1)
-	a=a.substr(8)
-        return a
+        return mqttlist[1]
     }  
 
     //% group="2.MQTT"  
