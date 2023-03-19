@@ -101,7 +101,7 @@ namespace microbiti2cesp32v2 {
     //% weight=57 
     export function clearmqtt():void {
         sendi2cmessage("clearmqtt=")
-	basic.pause(200)
+	basic.pause(100)
     }  
 	
 	
