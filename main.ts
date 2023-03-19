@@ -77,10 +77,10 @@ namespace microbiti2cesp32v2 {
     //% blockId=ReceiveMqttTopic block="receive mqtt topic"
     //% weight=98	
     export function ReceiveMqttTopic():string {
-        let a=receivei2cmessage("mqttrec=").substr(1)
+        let a=receivei2cmessage("mqttrec=")
 	basic.pause(100)
    	if (!a.includes("mqttrec"))
-        a=receivei2cmessage("mqttrec=").substr(1)
+        a=receivei2cmessage("mqttrec=")
         a=a.substr(8)
 	return a
     }  
