@@ -81,7 +81,6 @@ namespace microbiti2cesp32v2 {
 	basic.pause(100)
    	if (!a.includes("mqttrect"))
         a=receivei2cmessage("mqttrect=").substr(1)
-	basic.pause(100)
         a=a.substr(8)
 	return a
     }  
@@ -93,7 +92,6 @@ namespace microbiti2cesp32v2 {
 	basic.pause(100)
 	if (!a.includes("mqttrecm"))
         a=receivei2cmessage("mqttrecm=").substr(1)
-	basic.pause(100)
 	a=a.substr(8)
         return a
     }  
