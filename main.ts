@@ -77,9 +77,9 @@ namespace microbiti2cesp32v2 {
     //% blockId=ReceiveMqttTopic block="receive mqtt topic"
     //% weight=98	
     export function ReceiveMqttTopic():string {
-        let a=receivei2cmessage("mqttrect=").substr(1)
+        let a=receivei2cmessage("mqttrec=").substr(1)
 	basic.pause(100)
-   	if (!a.includes("mqttrect"))
+   	if (!a.includes("mqttrec"))
         a=receivei2cmessage("mqttrec=").substr(1)
         a=a.substr(8)
 	return a
@@ -110,7 +110,7 @@ namespace microbiti2cesp32v2 {
     //% weight=56 
     export function sendmqtt(topic: string, message: string):void {
         sendi2cmessage("sendmqtt="+topic+","+message)
-	basic.pause(200)
+	basic.pause(100)
     }  
     //% group="3.Line notify"  
     //% blockId=linetoken block="Line notify token %token "
