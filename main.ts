@@ -143,7 +143,7 @@ namespace microbiti2cesp32v3 {
     //% weight=45
     export function openweathermapcity(city: string):void {
         sendi2cmessage("openweathermapcity="+city)
-	basic.pause(2000)
+	basic.pause(400)
     }  
   //% group="4.OpenWeatherMap"  
     //% blockId=openweathermapreturn block="OpenWeatherMap option %option "
