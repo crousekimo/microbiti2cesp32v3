@@ -1,4 +1,4 @@
-# Microbiti2cESP32v2
+# Microbiti2cESP32v3
 
 Micro:Bit用i2c控制ESP32積木,目前測試用在凱斯家控板上
 
@@ -12,5 +12,5 @@ MIT
 (The metadata above is needed for package search.)
 
 ```package
-microbitarduino=github:crouse12/microbiti2cesp32v2
+microbitarduino=github:crouse12/microbiti2cesp32v3
 ```
