@@ -12,5 +12,5 @@ MIT
 (The metadata above is needed for package search.)
 
 ```package
-microbitarduino=github:crouse12/microbiti2cesp32v3
+microbiti2cesp32v3=github:crouse12/microbiti2cesp32v3
 ```
